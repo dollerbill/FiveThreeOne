@@ -1,0 +1,8 @@
+<%= form_for(:lift, url: { action: 'calculate', params: {  } }, method: :post) do |form| %>
+  <%= form.label :type, "Choose lift:" %>
+  <%= form.select :type, %w[Bench Deadlift Squat] %>
+  <br/>
+  <%= form.label :weight, "Enter Weight:" %>
+  <%= form.text_field :weight %>
+  <%= form.submit "Submit" %>
+<% end %>
